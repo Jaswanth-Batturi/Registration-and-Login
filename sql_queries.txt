@@ -1,0 +1,19 @@
+CREATE DATABASE employee;
+USE employee;
+GRANT ALL PRIVILEGES ON employee.* TO 'scot'@'localhost';
+CREATE TABLE emp(
+empID varchar(10) primary key,
+passwd varchar(255),
+empName varchar(20),
+DoJ date,
+salary int,
+department varchar(20),
+mobileNo bigint,
+email varchar(30));
+INSERT INTO emp VALUES
+('2014CS28','123456','Raghav','2014-06-13',125000,'CS',9027378124,'Raghav@gmail.com'),
+('2016ME01','password','Mahesh','2016-01-18',200000,'ME',8998281325,'Mahesh@iitp.ac.in'),
+('2015PH12','secret','Rajesh','2015-03-24',170000,'PH',8381371843,'Rajesh@gmail.com'),
+('2020EE36','LetMeIn','Prakash','2020-08-01',150000,'EE',9189298203,'Prakash@iitp.ac.in'),
+('2019CE02','vikram@30','Vikram','2019-05-28',250000,'CE',9313013825,'Vikram@yahoo.com');
+SELECT * FROM emp;
